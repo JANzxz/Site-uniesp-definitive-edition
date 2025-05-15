@@ -1,0 +1,42 @@
+// A navbar e um component pq assim posso reutilizar ela com mais facilidade
+// Rever a explicação do show
+
+import React, { useState } from 'react'
+import { Container, Nav, Navbar } from "react-bootstrap"
+import { Link } from 'react-router-dom'
+import uniesp from '../assets/uniesp.jpg' // Deu erro qui porcausa que esqueci dos .. porque assets ta dentro de uma pasta
+
+const CustomNavbar = () => {
+
+    const [show, setShow] = useState(false)
+
+    const handleClose = () => setShow(false)
+    const handleShow = () => setShow(true)
+
+  return (
+    <>
+        <Navbar expand="md" style={{ backgroundColor: "#002F6C" }}  variant= "dark" className="px-3 shadow-sm"> {/* Essa variant dark faz o texto ficar dark, e o backgroudColor e pra navbar ficar azul */}
+            <Container fluid>
+                <Navbar.Brand as={Link} to="/" className="d-flex align-items-center"> {/* Esse className ta centralizando os itens */}
+                    <img src={uniesp} alt="Uniesp Logo" width={60} height={60} className="me-2 rounded"></img> {/* O className daqui faz ficar arredondado */}
+                </Navbar.Brand>
+
+                {/* bOTÃO HAMBURGER visivel apenas em telas pequenas */}
+                <Navbar.Toggle onClick={handleShow} />
+                    <Navbar.Collapse className="justify-countent-end d-md-flex">
+                        <Nav>
+                            <Nav.Link as={Link} to="/a-faculdade" className="px-3">A Faculdade</Nav.Link>
+                            <Nav.Link as={Link} to="/dpo-lgpd" className="px-3">DPO LGPD</Nav.Link>
+                            <Nav.Link as={Link} to="/noticias" className="px-3">Noticias</Nav.Link>
+                            <Nav.Link as={Link} to="/admin-noticias" className="px-3">Admin</Nav.Link>
+                        </Nav>
+
+                    </Navbar.Collapse>
+
+            </Container>    
+        </Navbar>
+    </>
+  )
+}
+
+export default CustomNavbar

@@ -1,11 +1,26 @@
+// Componente pai
+// Conteiner e tudo que envolve a pagina
+// Ver depois poruqe tem que apagar o import da pagina inicial
+// Funcionou porque fiz o roteamento pra o caminho /Inicial que e o componente inicial
+
 import React from 'react'
-import Inicial from './pages/Inicial'
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { Container } from "react-bootstrap"
+import Inicial  from "./pages/Inicial"
+import CustomNavbar from "./components/CustomNavbar"
 
 const App = () => {
   return (
-    <div>
-      <Inicial/>
-    </div>
+    <BrowserRouter>
+            <CustomNavbar />
+      <Container>
+        <Routes>
+          <Route path="/" element={<Inicial/>}>
+
+          </Route>
+        </Routes>
+      </Container>
+    </BrowserRouter>
   )
 }
 
