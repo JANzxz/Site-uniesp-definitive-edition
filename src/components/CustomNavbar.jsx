@@ -2,7 +2,7 @@
 // Rever a explicação do show
 
 import React, { useState } from 'react'
-import { Container, Nav, Navbar } from "react-bootstrap"
+import { Container, Nav, Navbar, Offcanvas, OffcanvasBody, OffcanvasHeader, OffcanvasTitle } from "react-bootstrap"
 import { Link } from 'react-router-dom'
 import uniesp from '../assets/uniesp.jpg' // Deu erro qui porcausa que esqueci dos .. porque assets ta dentro de uma pasta
 
@@ -35,6 +35,24 @@ const CustomNavbar = () => {
 
             </Container>    
         </Navbar>
+
+        {/* mENU LATERAL*/}
+
+        <Offcanvas show={show} onHide={handleClose}>
+            <Offcanvas.Header closeButton>
+                <Offcanvas.Title>Menu</Offcanvas.Title>
+            </Offcanvas.Header>
+            <Offcanvas.Body>
+                <Nav className="flex-column">
+                    {/* Cada item de menu fecha o Offcanvas ao ser clicado*/}
+                    <Nav.Link as={Link} to="/a-faculdade" onClick={handleClose}>A Faculdade</Nav.Link>
+                    <Nav.Link as={Link} to="/dpo-lgpd" onClick={handleClose}>DPO LGPD</Nav.Link>
+                    <Nav.Link as={Link} to="/noticias" onClick={handleClose}>Noticias</Nav.Link>
+                    <Nav.Link as={Link} to="/admin-noticias" onClick={handleClose}>Admin</Nav.Link>
+                </Nav>
+            </Offcanvas.Body>
+        </Offcanvas>
+
     </>
   )
 }

@@ -8,16 +8,18 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { Container } from "react-bootstrap"
 import Inicial  from "./pages/Inicial"
 import CustomNavbar from "./components/CustomNavbar"
+import Faculdade from './pages/Faculdade'
+import DpoLgpd from './pages/DpoLgpd'
 
 const App = () => {
   return (
     <BrowserRouter>
-            <CustomNavbar />
+    <CustomNavbar />
       <Container>
         <Routes>
-          <Route path="/" element={<Inicial/>}>
-
-          </Route>
+          <Route path="/" element={<Inicial/>}/>
+          <Route path="/a-faculdade" element={<Faculdade/>}/>
+          <Route path="/dpo-lgpd" element={<DpoLgpd/>}/>""
         </Routes>
       </Container>
     </BrowserRouter>
