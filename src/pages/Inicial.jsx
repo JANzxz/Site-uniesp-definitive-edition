@@ -20,8 +20,8 @@ const Inicial = () => {
         </Card.Body>
       </Card>
 
-      <Row className="g-4">
-        <Col md={4}>
+      <Row className="g-4"> {/* O Row e para organizar em forma horizontal */}
+        <Col md={4}> {/* Col e pra organizar as coisas em linhas */}
           {/* Card1 */}
           <Card className="text-center h-100 shadow-sm">
             <Card.Img
@@ -37,7 +37,7 @@ const Inicial = () => {
               </Card.Title>
 
               <Card.Text>
-                A...
+                Um ambiente vibrande e acolhedor, com atividades...
               </Card.Text>
 
             </Card.Body>
@@ -49,7 +49,7 @@ const Inicial = () => {
           <Card className="text-center h-100 shadow-sm">
             <Card.Img
               variant="top"
-              src=""
+              src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc"
               alt="Campus Life"
               style={{ height: "200px", objectFit: "cover" }}
             />
@@ -60,7 +60,7 @@ const Inicial = () => {
               </Card.Title>
 
               <Card.Text>
-                A...
+                Uma biblioteca com um acervo completo e atualizado, incluindo livros, revistas e recursos digitais para pesquisa e estudo.
               </Card.Text>
 
             </Card.Body>
@@ -72,7 +72,7 @@ const Inicial = () => {
           <Card className="text-center h-100 shadow-sm">
             <Card.Img
               variant="top"
-              src=""
+              src="https://images.unsplash.com/photo-1652974731232-efc86a9bd985"
               alt="Campus Life"
               style={{ height: "200px", objectFit: "cover" }}
             />
@@ -83,7 +83,7 @@ const Inicial = () => {
               </Card.Title>
 
               <Card.Text>
-                A...
+                O centro de nossa instituição, com salas de aula modernas e laboratórios equipados para atender às necessidades dos cursos.
               </Card.Text>
 
             </Card.Body>

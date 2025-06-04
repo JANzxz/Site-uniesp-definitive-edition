@@ -1,9 +1,9 @@
 import React from 'react'
-import { Carousel, Container } from 'react-bootstrap'
+import { Carousel, Container } from 'react-bootstrap' /* O carousel e o container são componentes prontos do bootstrap */
 
 const BannerAd = () => {
   return (
-    <Container className="my-4 p-0" fluid>
+    <Container className="my-4 p-0" fluid> {/* O container organiza e centraliza o conteudo da pagina */}
       <Carousel fade interval={5000} controls={true} indicators={true}>
         {/* Slide 1*/}
         <Carousel.Item>

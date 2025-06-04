@@ -1,1 +1,24 @@
-/* Aqui e o css pai */
+/* Aqui e o css do modo escuro */
+
+body.modo-escuro {
+    background-color: #111 !important;
+    color: white !important;
+}
+
+body.modo-escuro * {
+    font-weight: bold !important;
+    color: white !important;
+}
+
+body.modo-escuro .card {
+    background-color: #1e1e1e !important;
+    border: 1px solid #333 !important;
+}
+
+body.modo-escuro .card-title {
+    color: white !important;
+}
+
+body.modo-escuro .card-text {
+    color: #dddddd !important;
+}
